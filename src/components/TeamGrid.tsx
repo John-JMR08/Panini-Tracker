@@ -3,11 +3,7 @@ import TeamCard from "./TeamCard"
 import { useTeams} from "../DataContext";
 
 function TeamGrid(){
-    const rawTeams: Team[] = JSON.parse(localStorage.getItem("JR.WC.Data") ?? "[]");
     const { teams } = useTeams();
-    // const [teams, setTeams] = useState(
-    //     createAllTeams()
-    // );
 
     function getTotalCompletion() : number {
         return teams.reduce((count, team) => {
@@ -21,7 +17,7 @@ function TeamGrid(){
         }, 0);
     }
 
-       function getTotalDuplicates() : number {
+    function getTotalDuplicates() : number {
          return teams.reduce((count, team) => {
             return count + team.stickers.filter(sticker => sticker.quantity > 1).length;
         }, 0);

@@ -18,9 +18,6 @@ function createTeam(name: string, code: string) : Team {
 }
 
 export function createAllTeams() : Team[] {
-    const rawTeams = localStorage.getItem('JR.WC.Data');
-    const teams = JSON.parse(rawTeams);
-
     return [
         createTeam("Mexico", "MEX"),
         createTeam("South Africa", "RSA"),
