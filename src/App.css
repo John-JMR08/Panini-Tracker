@@ -14,3 +14,7 @@
 .bg-mc{
   background-color: #ff8700 !important;
 }
+
+.smaller {
+    font-size: .750em;
+}
