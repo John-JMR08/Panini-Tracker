@@ -14,13 +14,13 @@ function CompletionProgress({heading, collected, missing, duplicates} : Completi
             <h1 className="text-light m-2 px-2">{heading}</h1>
             <div className="row g-3 px-2 pb-2 pt-2">
                 <div className="col-4">
-                   <ProgressBlock heading="Collected" number={collected} onClicked={() => console.log("collected")} />
+                   <ProgressBlock heading="Collected" number={collected} />
                 </div>
                 <div className="col-4">
-                   <ProgressBlock heading="Missing" number={missing} onClicked={() => console.log("missing")} />
+                   <ProgressBlock heading="Missing" number={missing} />
                 </div>
                 <div className="col-4">
-                     <ProgressBlock heading="Duplicate" number={duplicates} onClicked={() => console.log("collected")} />
+                     <ProgressBlock heading="Duplicate" number={duplicates} />
                 </div>
             </div>
         </div>
