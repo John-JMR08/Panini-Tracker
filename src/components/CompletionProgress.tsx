@@ -19,13 +19,13 @@ function CompletionProgress({heading, collected, missing, duplicates} : Completi
                 </div>
                 <div className="col-4">
                    <div className="border bg-card rounded-4 p-3 h-70">
-                        <div className="text-light fw-semibold">Missing</div>
+                        <div className="text-light small fw-semibold">Missing</div>
                         <div className="fs-4 fw-bold mc-orange">{missing}</div>
                     </div>
                 </div>
                 <div className="col-4">
                     <div className="border bg-card rounded-4 p-3 h-70">
-                        <div className="text-light fw-semibold">Duplicates</div>
+                        <div className="text-light small fw-semibold">Duplicates</div>
                         <div className="fs-4 fw-bold mc-orange">{duplicates}</div>
                     </div>
                 </div>
