@@ -1,3 +1,5 @@
+import ProgressBlock from "./ProgressBlock";
+
 interface CompletionProgressProps{
     heading: string,
     collected: number;
@@ -12,22 +14,13 @@ function CompletionProgress({heading, collected, missing, duplicates} : Completi
             <h1 className="text-light m-2 px-2">{heading}</h1>
             <div className="row g-3 px-2 pb-2 pt-2">
                 <div className="col-4">
-                    <div className="border bg-card rounded-4 pb-2 pt-2 px-3 h-70">
-                        <div className="text-light smaller fw-semibold">Collected</div>
-                        <div className="fs-4 fw-bold mc-orange">{collected}</div>
-                    </div>
+                   <ProgressBlock heading="Collected" number={collected} onClicked={() => console.log("collected")} />
                 </div>
                 <div className="col-4">
-                   <div className="border bg-card rounded-4 pb-2 pt-2 px-3 h-70">
-                        <div className="text-light smaller fw-semibold">Missing</div>
-                        <div className="fs-4 fw-bold mc-orange">{missing}</div>
-                    </div>
+                   <ProgressBlock heading="Missing" number={missing} onClicked={() => console.log("missing")} />
                 </div>
                 <div className="col-4">
-                    <div className="border bg-card rounded-4 pb-2 pt-2 px-3 h-70">
-                        <div className="text-light smaller fw-semibold">Duplicates</div>
-                        <div className="fs-4 fw-bold mc-orange">{duplicates}</div>
-                    </div>
+                     <ProgressBlock heading="Duplicate" number={duplicates} onClicked={() => console.log("collected")} />
                 </div>
             </div>
         </div>
